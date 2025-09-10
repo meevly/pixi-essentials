@@ -1,6 +1,6 @@
 {
   "name": "@pixi-essentials/object-pool",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Custom-tailored object pool for PixiJS-based applications",
   "keywords": [
     "pixi.js",
@@ -45,7 +45,7 @@
   },
   "devDependencies": {
     "@microsoft/api-extractor": "7.7.13",
-    "pixi.js": "^8.0.0",
+    "pixi.js": "^8.1.0",
     "@pixi-build-tools/rollup-configurator": "^1.0.10",
     "tslib": "~2.0.1",
     "typescript": "~5.3.3",
