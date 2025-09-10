@@ -41,7 +41,7 @@
     "url": "https://github.com/SukantPal/pixi-essentials/issues"
   },
   "peerDependencies": {
-    "pixi.js": "^8.0.0"
+    "pixi.js": "^8.1.0"
   },
   "devDependencies": {
     "@microsoft/api-extractor": "7.7.13",

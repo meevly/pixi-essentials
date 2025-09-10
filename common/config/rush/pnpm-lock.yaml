@@ -22,10 +22,7 @@ dependencies:
     version: 7.1.4
   '@pixi/react':
     specifier: ^7.0.0
-    version: 7.1.0(@pixi/constants@5.3.12)(@pixi/display@7.1.4)(@pixi/graphics@7.1.4)(@pixi/math@7.1.4)(@pixi/ticker@7.1.4)(react@18.2.0)
-  '@pixi/ticker':
-    specifier: ^7.0.0
-    version: 7.1.4
+    version: 7.1.0(@pixi/constants@5.3.12)(@pixi/display@7.1.4)(@pixi/graphics@7.1.4)(@pixi/math@7.1.4)(react@18.2.0)
   '@pixi/utils':
     specifier: ^5.1.0
     version: 5.3.12
@@ -82,7 +79,7 @@ dependencies:
     version: file:projects/object-pool.tgz
   '@rush-temp/react-bindings':
     specifier: file:./projects/react-bindings.tgz
-    version: file:projects/react-bindings.tgz(@pixi/constants@5.3.12)(@pixi/graphics@7.1.4)(@pixi/ticker@7.1.4)
+    version: file:projects/react-bindings.tgz(@pixi/constants@5.3.12)(@pixi/graphics@7.1.4)
   '@rush-temp/shader-preprocessor':
     specifier: file:./projects/shader-preprocessor.tgz
     version: file:projects/shader-preprocessor.tgz
@@ -715,7 +712,7 @@ packages:
     resolution: {integrity: sha512-E886CuBC3I8RPb9Mmm7ko+MLRQAb47ec6xpdL1c3t5w4D/iiYHV9Z/mKBluI6ElhSeZkkq3EbEiMSCB1ZTYXag==}
     dev: false
 
-  /@pixi/react@7.1.0(@pixi/constants@5.3.12)(@pixi/display@7.1.4)(@pixi/graphics@7.1.4)(@pixi/math@7.1.4)(@pixi/ticker@7.1.4)(react@18.2.0):
+  /@pixi/react@7.1.0(@pixi/constants@5.3.12)(@pixi/display@7.1.4)(@pixi/graphics@7.1.4)(@pixi/math@7.1.4)(react@18.2.0):
     resolution: {integrity: sha512-HnZSEyqIoIsgnilJ8U4N1SqSfCxl7y+drwzej5Vwi4Q2cPb420uPhPma1OXskxRo7HAWBjgdKBHlcEk40ZAKGg==}
     peerDependencies:
       '@babel/runtime': ^7.14.8
@@ -742,7 +739,6 @@ packages:
       '@pixi/display': 7.1.4
       '@pixi/graphics': 7.1.4
       '@pixi/math': 7.1.4
-      '@pixi/ticker': 7.1.4
       lodash.isnil: 4.0.0
       lodash.times: 4.3.2
       performance-now: 2.1.0
@@ -824,7 +820,7 @@ packages:
     dependencies:
       '@pixi/constants': 7.1.4
       '@pixi/settings': 7.1.4
-      '@types/earcut': 2.1.1
+      '@types/earcut': 2.1.4
       earcut: 2.2.4
       eventemitter3: 4.0.7
       url: 0.11.0
@@ -1263,10 +1259,6 @@ packages:
 
   /@types/css-font-loading-module@0.0.7:
     resolution: {integrity: sha512-nl09VhutdjINdWyXxHWN/w9zlNCfr60JUqJbd24YXUuCwgeL0TpFSdElCwb6cxfB6ybE19Gjj4g0jsgkXxKv1Q==}
-    dev: false
-
-  /@types/earcut@2.1.1:
-    resolution: {integrity: sha512-w8oigUCDjElRHRRrMvn/spybSMyX8MTkKA5Dv+tS1IE/TgmNZPqUYtvYBXGY8cieSE66gm+szeK+bnbxC2xHTQ==}
     dev: false
 
   /@types/earcut@2.1.4:
@@ -6789,7 +6781,7 @@ packages:
     dev: false
 
   file:projects/bounds.tgz:
-    resolution: {integrity: sha512-ygg7upCs7U3bbSvYv/COoDvfI9PNGIRbEf6tznqcQFUQjr5KISPEr6nYgbQC7X5w2tPeS7fNOnX68zga7+lvQQ==, tarball: file:projects/bounds.tgz}
+    resolution: {integrity: sha512-pAOgHHCJ4uPM7O0ykPHHwK1G8AOYyfa7AINMorKK1rNaWRqjGVQs/5SUlaI8s+28kfmm5NRG9Oc1gj6rIojZ4A==, tarball: file:projects/bounds.tgz}
     name: '@rush-temp/bounds'
     version: 0.0.0
     dependencies:
@@ -6797,6 +6789,7 @@ packages:
       '@pixi-build-tools/rollup-configurator': 1.0.14(rollup@2.27.1)
       '@pixi/math': 7.1.4
       eslint: 7.7.0
+      pixi.js: 8.4.1
       rollup: 2.27.1
       tslib: 2.0.3
       typescript: 5.3.3
@@ -6920,7 +6913,7 @@ packages:
     dev: false
 
   file:projects/examples.tgz:
-    resolution: {integrity: sha512-sycezwCpKKjq10ReS5y5cUEJ+OzL3Umwuia9KO8e1l+VFJGRsdw5UDktLjC2CtGvp6TcChCFKA4KZP3FyKOT9A==, tarball: file:projects/examples.tgz}
+    resolution: {integrity: sha512-G2T2+xstUsFsJ8hPXU719O+B1OEnsZWbCN1E9QR1tOzd9tZ58cAq+4OLbQ+6pT/buqpFc86rwPs8FZp0jV0QdA==, tarball: file:projects/examples.tgz}
     name: '@rush-temp/examples'
     version: 0.0.0
     dependencies:
@@ -7015,7 +7008,7 @@ packages:
     dev: false
 
   file:projects/object-pool.tgz:
-    resolution: {integrity: sha512-p4Q0LrhD6sjxg3EGd1raPmwl2mKcxYxkSJ9V2LYtYHr4p5ac9WldDIm8qGSpKzdbhxH5iuMTB1vRC/U3q12pQA==, tarball: file:projects/object-pool.tgz}
+    resolution: {integrity: sha512-78mj9mtYslrhbq7iDDeYQB9XhOsMaVNN4+6zfmXuTTdjWrgrkx/ZkzgPaEsZQO5V1Ipa/ReoaAZ2GMcl7qmt+A==, tarball: file:projects/object-pool.tgz}
     name: '@rush-temp/object-pool'
     version: 0.0.0
     dependencies:
@@ -7025,6 +7018,7 @@ packages:
       '@pixi/ticker': 7.1.4
       chai: 4.3.7
       eslint: 7.7.0
+      pixi.js: 8.4.1
       rollup: 2.27.1
       sinon: 9.2.4
       tslib: 2.0.3
@@ -7034,7 +7028,7 @@ packages:
       - supports-color
     dev: false
 
-  file:projects/react-bindings.tgz(@pixi/constants@5.3.12)(@pixi/graphics@7.1.4)(@pixi/ticker@7.1.4):
+  file:projects/react-bindings.tgz(@pixi/constants@5.3.12)(@pixi/graphics@7.1.4):
     resolution: {integrity: sha512-t/QLdPo5yDnXb9KPVtTbaORQyTKpqsMFhLTWZ3GN6cf1Z94iyYlELCcrU3RZFeGzhSe51PEdB4w47ywmWe2pFQ==, tarball: file:projects/react-bindings.tgz}
     id: file:projects/react-bindings.tgz
     name: '@rush-temp/react-bindings'
@@ -7043,7 +7037,7 @@ packages:
       '@pixi-build-tools/rollup-configurator': 1.0.14(rollup@2.27.1)
       '@pixi/display': 7.1.4
       '@pixi/math': 7.1.4
-      '@pixi/react': 7.1.0(@pixi/constants@5.3.12)(@pixi/display@7.1.4)(@pixi/graphics@7.1.4)(@pixi/math@7.1.4)(@pixi/ticker@7.1.4)(react@18.2.0)
+      '@pixi/react': 7.1.0(@pixi/constants@5.3.12)(@pixi/display@7.1.4)(@pixi/graphics@7.1.4)(@pixi/math@7.1.4)(react@18.2.0)
       '@types/react': 16.14.35
       eslint: 7.7.0
       react: 18.2.0
@@ -7091,7 +7085,7 @@ packages:
     dev: false
 
   file:projects/svg.tgz:
-    resolution: {integrity: sha512-D9T3FhZLJcx5gbcV0c1Lrv75AGGzX8D2u+vRHJgqcB8xOB0mWs8Gf03DmF5PbIgHWyRVmim7tL0XRrm+lBH2LA==, tarball: file:projects/svg.tgz}
+    resolution: {integrity: sha512-Cd+AdHUuOw6v8OR8s1fdecKjtwoBG8VmN9oCUJSiWdUX170zstmtMnaYOmcQQdPfFuRmpY/iLB0zNxsh+H3G/Q==, tarball: file:projects/svg.tgz}
     name: '@rush-temp/svg'
     version: 0.0.0
     dependencies:
@@ -7137,7 +7131,7 @@ packages:
     dev: false
 
   file:projects/texture-allocator.tgz:
-    resolution: {integrity: sha512-/51erNeMNfBZd5RC7nz2dUofJUc89vccuBLBmppUlXqsRlH33i4wOKs1+rZyyAgzaaZkrJ7thMlXz+f42UIEQA==, tarball: file:projects/texture-allocator.tgz}
+    resolution: {integrity: sha512-zpPm2d/3VofInpcDKRnSbeNclhCCgdc/chJUbP/TcPOUujtA4ZqD/Ser7B7h4Idnipl8ZJaZRWGaybVr1RFwNQ==, tarball: file:projects/texture-allocator.tgz}
     name: '@rush-temp/texture-allocator'
     version: 0.0.0
     dependencies:
@@ -7157,7 +7151,7 @@ packages:
     dev: false
 
   file:projects/transformer.tgz:
-    resolution: {integrity: sha512-l3YnTX1KXSArLr80N6jDYpCwItorqMprkLcOjzYeZw8choRJRL6xeH9BKW4cLjKYnHyg9Bjq1Q+Pm9ZrQyfN3A==, tarball: file:projects/transformer.tgz}
+    resolution: {integrity: sha512-1TwiFnfyFrJG/KSFcqt/VnIojoqrLV/ZaJoA6/Py1/47NqT6cswD4ymtBWG7Kf2rdTr9H2DrRQVeGodtVQdKgw==, tarball: file:projects/transformer.tgz}
     name: '@rush-temp/transformer'
     version: 0.0.0
     dependencies:
@@ -7169,6 +7163,7 @@ packages:
       '@pixi/graphics': 7.1.4
       '@pixi/math': 7.1.4
       eslint: 7.7.0
+      pixi.js: 8.4.1
       rollup: 2.27.1
       tslib: 2.0.3
       typescript: 5.3.3
