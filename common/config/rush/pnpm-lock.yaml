@@ -11,6 +11,9 @@ dependencies:
   '@pixi-build-tools/rollup-configurator':
     specifier: ^1.0.10
     version: 1.0.14(rollup@2.79.1)
+  '@pixi-essentials/object-pool':
+    specifier: ^1.0.1
+    version: 1.0.1
   '@pixi/constants':
     specifier: ^5.1.0
     version: 5.3.12
@@ -521,6 +524,13 @@ packages:
       rollup-plugin-terser: 7.0.2(rollup@2.79.1)
     transitivePeerDependencies:
       - '@types/node'
+    dev: false
+
+  /@pixi-essentials/object-pool@1.0.1:
+    resolution: {integrity: sha512-8/rwSi+yOjINQcAsviRaTcWRybmR6SVQnYpMXSgGzoMobv4jNSvS5HULlskAMXWh/Q44XCxY0Hi9jwv5gaw6bQ==}
+    peerDependencies:
+      '@pixi/settings': ^7.0.0
+      '@pixi/ticker': ^7.0.0
     dev: false
 
   /@pixi/accessibility@7.1.4:
@@ -6781,7 +6791,7 @@ packages:
     dev: false
 
   file:projects/bounds.tgz:
-    resolution: {integrity: sha512-pAOgHHCJ4uPM7O0ykPHHwK1G8AOYyfa7AINMorKK1rNaWRqjGVQs/5SUlaI8s+28kfmm5NRG9Oc1gj6rIojZ4A==, tarball: file:projects/bounds.tgz}
+    resolution: {integrity: sha512-0yZK0FgdQvcFM8Z/s59ofXIJOfk+leNBIyRyNtfE64f/iCqrBopicixLK2CAFCgLGBJ/Q7PuBVlZna656MKMlA==, tarball: file:projects/bounds.tgz}
     name: '@rush-temp/bounds'
     version: 0.0.0
     dependencies:
@@ -6799,7 +6809,7 @@ packages:
     dev: false
 
   file:projects/bvh.tgz:
-    resolution: {integrity: sha512-7A7kBHU1UaFHv4aD8Vf6vyFqYy0UGRH9t7K+oWxPEVOm699aYUzPbfv11UTnjLFACUffuxg8yFV9M+N08xAc3w==, tarball: file:projects/bvh.tgz}
+    resolution: {integrity: sha512-fz5VGfzg3rcmMmS98Fkk6uHei34Iss8ThQ18Oj9HJaTURO0ANru05Gsa0fYaRsGnRD1QPrgeIzgtrnYbSkdrog==, tarball: file:projects/bvh.tgz}
     name: '@rush-temp/bvh'
     version: 0.0.0
     dependencies:
@@ -6989,11 +6999,12 @@ packages:
     dev: false
 
   file:projects/mixin-smart-mask.tgz:
-    resolution: {integrity: sha512-/Ml7i2xYoSCKphAJG7DIGyNmRbsdCfRb6FCB4Wo0D0c6xxjvQdaf7mFl/c2YcilCVLqXwlqdxe+d9jpWSQ6LwQ==, tarball: file:projects/mixin-smart-mask.tgz}
+    resolution: {integrity: sha512-RMlhr+UtoBYXTfotNRdYO2nEY5l2y/ao2NosPQlXdJ7G8ImcG2z6GUHPtPHYIZAC2PExmQLt6t7a2wUVqRKoHw==, tarball: file:projects/mixin-smart-mask.tgz}
     name: '@rush-temp/mixin-smart-mask'
     version: 0.0.0
     dependencies:
       '@pixi-build-tools/rollup-configurator': 1.0.14(rollup@2.27.1)
+      '@pixi-essentials/object-pool': 1.0.1
       '@pixi/display': 7.1.4
       '@pixi/graphics': 7.1.4
       '@pixi/math': 7.1.4
@@ -7003,6 +7014,8 @@ packages:
       tslib: 2.0.3
       typescript: 5.3.3
     transitivePeerDependencies:
+      - '@pixi/settings'
+      - '@pixi/ticker'
       - '@types/node'
       - supports-color
     dev: false
@@ -7029,7 +7042,7 @@ packages:
     dev: false
 
   file:projects/react-bindings.tgz(@pixi/constants@5.3.12)(@pixi/graphics@7.1.4):
-    resolution: {integrity: sha512-t/QLdPo5yDnXb9KPVtTbaORQyTKpqsMFhLTWZ3GN6cf1Z94iyYlELCcrU3RZFeGzhSe51PEdB4w47ywmWe2pFQ==, tarball: file:projects/react-bindings.tgz}
+    resolution: {integrity: sha512-dnfPMVGjfLoV8NtQLbT+HbtkzBSbUkCIu0nrkEcOzpsbsF/eS89PuQe4+reC18erz9w0FnSvW/nsHb+Qz8Jl2g==, tarball: file:projects/react-bindings.tgz}
     id: file:projects/react-bindings.tgz
     name: '@rush-temp/react-bindings'
     version: 0.0.0
@@ -7151,7 +7164,7 @@ packages:
     dev: false
 
   file:projects/transformer.tgz:
-    resolution: {integrity: sha512-1TwiFnfyFrJG/KSFcqt/VnIojoqrLV/ZaJoA6/Py1/47NqT6cswD4ymtBWG7Kf2rdTr9H2DrRQVeGodtVQdKgw==, tarball: file:projects/transformer.tgz}
+    resolution: {integrity: sha512-1RcBqZpRWBxFScLPGHOpUJvQlLUJ7TjyHQi7yiGVyXnlao7T8sipHmZ/+ticSKY1DFYPao/whvdT2o3K2bzMRg==, tarball: file:projects/transformer.tgz}
     name: '@rush-temp/transformer'
     version: 0.0.0
     dependencies:
