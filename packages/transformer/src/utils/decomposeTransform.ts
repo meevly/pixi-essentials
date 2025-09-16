@@ -1,4 +1,4 @@
-import type {Transform, Matrix, Point} from '@pixi/math';
+import type { Transform, Matrix, Point } from 'pixi.js';
 
 /**
  * Decomposes the matrix into transform, while preserving rotation & the pivot.

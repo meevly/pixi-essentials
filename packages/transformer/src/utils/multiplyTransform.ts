@@ -1,7 +1,7 @@
-import { Matrix } from '@pixi/math';
+import { Container, Matrix, DisplayObject } from 'pixi.js';
 import { decomposeTransform } from './decomposeTransform';
 
-import type { DisplayObject } from '@pixi/display';
+interface DisplayObject extends Container {}
 
 const tempMatrix = new Matrix();
 const tempParentMatrix = new Matrix();

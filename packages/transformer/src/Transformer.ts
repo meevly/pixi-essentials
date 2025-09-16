@@ -1,6 +1,16 @@
-import {Renderer, utils} from '@pixi/core';
-import { DisplayObject, Container } from '@pixi/display';
-import { Point, Matrix, Transform, Rectangle } from '@pixi/math';
+import { Renderer,
+    utils,
+    DisplayObject,
+    Container,
+    Point,
+    Matrix,
+    Transform,
+    Rectangle,
+    Cursor,
+    FederatedEventTarget,
+    FederatedPointerEvent,
+    IFederatedDisplayObject
+} from 'pixi.js';
 import { OrientedBounds } from '@pixi-essentials/bounds';
 import { ObjectPoolFactory } from '@pixi-essentials/object-pool';
 import { TransformerHandle } from './TransformerHandle';
@@ -10,12 +20,6 @@ import { decomposeTransform } from './utils/decomposeTransform';
 import { multiplyTransform } from './utils/multiplyTransform';
 
 import type { ITransformerHandleStyle } from './TransformerHandle';
-import {
-    Cursor,
-    FederatedEventTarget,
-    FederatedPointerEvent,
-    IFederatedDisplayObject,
-} from "@pixi/events";
 
 // Preallocated objects
 const tempTransform = new Transform();
@@ -23,7 +27,6 @@ const tempCorners: [Point, Point, Point, Point] = [new Point(), new Point(), new
 const tempMatrix = new Matrix();
 const tempPoint = new Point();
 const tempBounds = new OrientedBounds();
-const tempRect = new Rectangle();
 const tempHull = [new Point(), new Point(), new Point(), new Point()];
 const tempPointer = new Point();
 const emitMatrix = new Matrix();// Used to pass to event handlers
@@ -1151,6 +1154,10 @@ export class Transformer extends Container_
             ? Transformer.calculateGroupOrientedBounds(targets, this.groupBounds.rotation, tempBounds, true)
             : Transformer.calculateOrientedBounds(targets[0], tempBounds);// Auto-detect rotation
 
+            console.log('pussssy')
+
+            console.log(groupBounds);
+
         // Redraw skeleton and position handles
         this.wireframe.drawBounds(groupBounds);
 
@@ -1299,7 +1306,9 @@ export class Transformer extends Container_
 
             handle.rotation = rotation;
             handle.position.copyFrom(handleAnchors[handleName]);
-            handle.getBounds(false, tempRect);
+            handle.getBounds(false);
+
+            console.log(handle);
         }
     }
 
@@ -1606,6 +1615,7 @@ export class Transformer extends Container_
 
         return corners;
     }
+    
 
     /**
      * Calculates the oriented bounding box of the display-object. This would not bending with any skew
@@ -1672,21 +1682,20 @@ export class Transformer extends Container_
     ): OrientedBounds
     {
         const groupLength = group.length;
-        const frames = pointPool.allocateArray(groupLength * 4);// Zero allocations!
+        const frames = pointPool.allocateArray(groupLength * 4);// Zero allocations!;
 
         // Calculate display-object frame vertices
         for (let i = 0; i < groupLength; i++)
         {
             const displayObject = group[i];
 
+            // @TODO check v8 refactor
             // Update worldTransform
-            if (!skipUpdate)
-            {
-                const parent = !displayObject.parent ? displayObject.enableTempParent() : displayObject.parent;
-
-                displayObject.updateTransform();
-                displayObject.disableTempParent(parent);
-            }
+            // if (!skipUpdate)
+            // {
+            //     displayObject.updateTransform();
+            //     displayObject.disableTempParent(parent);
+            // }
 
             Transformer.calculateTransformedCorners(displayObject, displayObject.worldTransform, frames, i * 4);
         }

@@ -1,5 +1,5 @@
 import { AxisAlignedBounds } from './AxisAlignedBounds';
-import { Matrix, ObservablePoint, Point } from '@pixi/math';
+import { Matrix, ObservablePoint, Point } from 'pixi.js';
 
 const tempPoint = new Point();
 
